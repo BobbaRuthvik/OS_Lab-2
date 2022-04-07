@@ -1,5 +1,10 @@
 #!/usr/sbin/dtrace -s
 
+dtrace:::BEGIN
+{
+	printf("              UID        GID\n");
+}
+
 syscall::open:entry
 / execname == "main" /
 {

@@ -1,0 +1,167 @@
+CPU     ID                    FUNCTION:NAME
+  0      1                           :BEGIN               UID        GID
+
+  0  65611                none:exec-success   /bin/sh -c adjkerntz -a          
+  0  65611                none:exec-success   adjkerntz -a                     
+  0  65611                none:exec-success   /usr/local/sbin/pkg annotate -a -S expiration_date
+  0  65611                none:exec-success   /usr/local/sbin/pkg annotate -a -S deprecated
+  0  65611                none:exec-success   cat /tmp/periodic.0iSuP3QMtR     
+  0  65611                none:exec-success   cp /dev/null /tmp/periodic.0iSuP3QMtR
+  0  65611                none:exec-success   /bin/sh - /usr/local/etc/periodic/security/460.pkg-checksum
+  0  65611                none:exec-success   /usr/local/sbin/pkg -N           
+  0  65611                none:exec-success   /usr/local/sbin/pkg check -qsa   
+  0  65611                none:exec-success   sed -e s/ checksum mismatch for//
+  0  65611                none:exec-success   tee /dev/stderr                  
+  0  65611                none:exec-success   wc -l                            
+  0  65611                none:exec-success   cat /tmp/periodic.0iSuP3QMtR     
+  0  65611                none:exec-success   cp /dev/null /tmp/periodic.0iSuP3QMtR
+  0  65611                none:exec-success   sendmail -i root                 
+  0  65611                none:exec-success   rm -f /tmp/periodic.0iSuP3QMtR   
+  0  65611                none:exec-success   sendmail -i root                 
+  0  65611                none:exec-success   cat /tmp/periodic.eTtwSHQ347     
+  0  65611                none:exec-success   cp /dev/null /tmp/periodic.eTtwSHQ347
+  0  65611                none:exec-success   /bin/sh /etc/periodic/daily/460.status-mail-rejects
+  0  65611                none:exec-success   date -v-1d +%b %e                
+  0  65611                none:exec-success   date +%b %e                      
+  0  65611                none:exec-success 
+             0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f  0123456789abcdef
+         0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+
+  0  65611                none:exec-success   cat                              
+  0  65611                none:exec-success   tee /dev/stderr                  
+  0  65611                none:exec-success   sort -f                          
+  0  65611                none:exec-success   bzcat -fc /var/log/maillog.1.bz2 
+  0  65611                none:exec-success   sort -fnr                        
+  0  65611                none:exec-success   uniq -ic                         
+  0  65611                none:exec-success   wc -l                            
+  0  65611                none:exec-success   bzcat -fc /var/log/maillog.0.bz2 
+  0  65611                none:exec-success   cat /var/log/maillog             
+  0  65611                none:exec-success   cat /tmp/periodic.eTtwSHQ347     
+  0  65611                none:exec-success   cp /dev/null /tmp/periodic.eTtwSHQ347
+  0  65611                none:exec-success   /bin/sh /etc/periodic/daily/480.leapfile-ntpd
+  0  65611                none:exec-success   /bin/sh /usr/sbin/service ntpd oneneedfetch
+  0  65611                none:exec-success   kenv -q rc.debug                 
+  0  65611                none:exec-success   env -i -L -/daemon HOME=/ PATH=/sbin:/bin:/usr/sbin:/usr/bin /etc/rc.d/ntpd oneneedfetch
+  0  65611                none:exec-success   /bin/sh /etc/rc.d/ntpd oneneedfetch
+  0  65611                none:exec-success   kenv -q rc.debug                 
+  0  65611                none:exec-success   awk $1 == "#$" { print $2 } /etc/ntp/leap-seconds
+  0  65611                none:exec-success   expr 3676924800 : ^\([1-9][0-9]*\)$ | 0
+  0  65611                none:exec-success   awk $1 == "#@" { print $2 } /etc/ntp/leap-seconds
+  0  65611                none:exec-success   expr 3833827200 : ^\([1-9][0-9]*\)$ | 0
+  0  65611                none:exec-success   awk $1 == "#$" { print $2 } /var/db/ntpd.leap-seconds.list
+  0  65611                none:exec-success   expr 3676924800 : ^\([1-9][0-9]*\)$ | 0
+  0  65611                none:exec-success   awk $1 == "#@" { print $2 } /var/db/ntpd.leap-seconds.list
+  0  65611                none:exec-success   expr 3865363200 : ^\([1-9][0-9]*\)$ | 0
+  0  65611                none:exec-success   awk $1 == "#@" { print $2 } /var/db/ntpd.leap-seconds.list
+  0  65611                none:exec-success   expr 3865363200 : ^\([1-9][0-9]*\)$ | 0
+  0  65611                none:exec-success   date -u +%s                      
+  0  65611                none:exec-success   cp /dev/null /tmp/periodic.eTtwSHQ347
+  0  65611                none:exec-success   /bin/sh /etc/periodic/daily/480.status-ntpd
+  0  65611                none:exec-success   cp /dev/null /tmp/periodic.eTtwSHQ347
+  0  65611                none:exec-success   /bin/sh /etc/periodic/daily/500.queuerun
+  0  65611                none:exec-success   /usr/sbin/sendmail -q            
+  0  65611                none:exec-success   /usr/sbin/sendmail -q -Ac        
+  0  65611                none:exec-success   cp /dev/null /tmp/periodic.eTtwSHQ347
+  0  65611                none:exec-success   /usr/sbin/sendmail -q            
+  0  65611                none:exec-success   /usr/sbin/sendmail -q -Ac        
+  0  65611                none:exec-success   /bin/sh /etc/periodic/daily/510.status-world-kernel
+  0  65611                none:exec-success   /usr/bin/uname -U                
+  0  65611                none:exec-success   /usr/bin/uname -K                
+  0  65611                none:exec-success   cat /tmp/periodic.eTtwSHQ347     
+  0  65611                none:exec-success   cp /dev/null /tmp/periodic.eTtwSHQ347
+  0  65611                none:exec-success   /bin/sh /etc/periodic/daily/800.scrub-zfs
+  0  65611                none:exec-success   cp /dev/null /tmp/periodic.eTtwSHQ347
+  0  65611                none:exec-success   /bin/sh /etc/periodic/daily/999.local
+  0  65611                none:exec-success   cp /dev/null /tmp/periodic.eTtwSHQ347
+  0  65611                none:exec-success   /bin/sh - /usr/local/etc/periodic/daily/411.pkg-backup
+  0  65611                none:exec-success   /usr/local/sbin/pkg -N           
+  0  65611                none:exec-success   jot 7 6 0                        
+  0  65611                none:exec-success   mv -f /var/backups/pkg.sql.xz.1 /var/backups/pkg.sql.xz.2
+  0  65611                none:exec-success   mv -f /var/backups/pkg.sql.xz /var/backups/pkg.sql.xz.1
+  0  65611                none:exec-success   /usr/local/sbin/pkg shell pragma user_version
+  0  65611                none:exec-success   xz -c                            
+  0  65611                none:exec-success   /usr/local/sbin/pkg shell .dump  
+  0  65611                none:exec-success   ./main                           
+  0  67952                       open:entry main /etc/libmap.conf 1013 1016
+  0  67952                       open:entry main /usr/local/etc/libmap.d 1013 1016
+  0  67952                       open:entry main /var/run/ld-elf.so.hints 1013 1016
+  0  67952                       open:entry main /lib/libstdc++.so.6 1013 1016
+  0  67952                       open:entry main /usr/lib/libstdc++.so.6 1013 1016
+  0  67952                       open:entry main /usr/lib/compat/libstdc++.so.6 1013 1016
+  0  67952                       open:entry main /usr/local/lib/libstdc++.so.6 1013 1016
+  0  67952                       open:entry main /usr/local/lib/compat/pkg/libstdc++.so.6 1013 1016
+  0  67952                       open:entry main /usr/local/lib/gcc10/libstdc++.so.6 1013 1016
+  0  67952                       open:entry main /lib/libm.so.5 1013 1016
+  0  67952                       open:entry main /lib/libgcc_s.so.1 1013 1016
+  0  67952                       open:entry main /lib/libc.so.7 1013 1016
+  0  65611                none:exec-success   sh -c echo admin | sudo -S chmod 666 marksheet.txt
+  0  65611                none:exec-success   sudo -S chmod 666 marksheet.txt  
+  0  65611                none:exec-success   chmod 666 marksheet.txt          
+  0  65611                none:exec-success   sh -c vim marksheet.txt          
+  0  65611                none:exec-success   vim marksheet.txt                
+  0  65611                none:exec-success   mail.local -l                    
+  0  65611                none:exec-success   cat /tmp/periodic.eTtwSHQ347     
+  0  65611                none:exec-success   cp /dev/null /tmp/periodic.eTtwSHQ347
+  0  65611                none:exec-success   /bin/sh - /usr/local/etc/periodic/daily/490.status-pkg-changes
+  0  65611                none:exec-success   cp /dev/null /tmp/periodic.eTtwSHQ347
+  0  65611                none:exec-success   sendmail -i root                 
+  0  65611                none:exec-success   sendmail -i root                 
+  0  65611                none:exec-success   rm -f /tmp/periodic.eTtwSHQ347   
+  0  65611                none:exec-success   rm -f /tmp/periodic.anticongestion.gscTloe7LU
+  0  65611                none:exec-success   sh -c echo admin | sudo -S chmod 600 marksheet.txt
+  0  65611                none:exec-success   sudo -S chmod 600 marksheet.txt  
+  0  65611                none:exec-success   chmod 600 marksheet.txt          
+  0  65611                none:exec-success   mail.local -l                    
+  0  65611                none:exec-success   login s1                         
+  0  65611                none:exec-success   -sh                              
+  0  65611                none:exec-success   /usr/bin/resizewin -z            
+  0  65611                none:exec-success   /usr/bin/fortune freebsd-tips    
+  0  65611                none:exec-success   ./main                           
+  0  67952                       open:entry main /etc/libmap.conf 1014 1017
+  0  67952                       open:entry main /usr/local/etc/libmap.d 1014 1017
+  0  67952                       open:entry main /var/run/ld-elf.so.hints 1014 1017
+  0  67952                       open:entry main /lib/libstdc++.so.6 1014 1017
+  0  67952                       open:entry main /usr/lib/libstdc++.so.6 1014 1017
+  0  67952                       open:entry main /usr/lib/compat/libstdc++.so.6 1014 1017
+  0  67952                       open:entry main /usr/local/lib/libstdc++.so.6 1014 1017
+  0  67952                       open:entry main /usr/local/lib/compat/pkg/libstdc++.so.6 1014 1017
+  0  67952                       open:entry main /usr/local/lib/gcc10/libstdc++.so.6 1014 1017
+  0  67952                       open:entry main /lib/libm.so.5 1014 1017
+  0  67952                       open:entry main /lib/libgcc_s.so.1 1014 1017
+  0  67952                       open:entry main /lib/libc.so.7 1014 1017
+  0  65611                none:exec-success   sh -c echo s1 | sudo -S chmod 666 marksheet.txt
+  0  65611                none:exec-success   sudo -S chmod 666 marksheet.txt  
+  0  65611                none:exec-success   chmod 666 marksheet.txt          
+  0  65611                none:exec-success   sh -c echo s1 | sudo -S chmod 600 marksheet.txt
+  0  65611                none:exec-success   sudo -S chmod 600 marksheet.txt  
+  0  65611                none:exec-success   chmod 600 marksheet.txt          
+
+
+  main                                              
+           value  ------------- Distribution ------------- count    
+               0 |                                         0        
+               1 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@          14       
+               2 |                                         0        
+               4 |                                         0        
+               8 |                                         0        
+              16 |                                         0        
+              32 |@@@@                                     2        
+              64 |                                         0        
+             128 |@@@@                                     2        
+             256 |                                         0        
+
